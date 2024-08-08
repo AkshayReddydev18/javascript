@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("enter a number");
+      let b = +prompt("enter a number");
+      let c = +prompt("enter a number");
+      let z = a + b + c;
+      if (z == 180) {
+        if (a == 90 || b == 90 || c == 90) {
+          alert("it is a  right angled triangle");
+        }
+        else{
+          alert(" it is not a right angled triangle");
+        }
+      }
+      else{
+        alert(" it is not a  triangle");
+      }
+    </script>
+</body>
+</html>
