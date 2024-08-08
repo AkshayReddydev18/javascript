@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>power of 2</title>
+    <link rel="icon" type="image" href="./growth-50.png" />
+  </head>
+  <body>
+    <script>
+      let a = +prompt("enter any number ");
+      if ((a & (a - 1)) == 0) {
+        alert("it is a power of 2");
+      } else {
+        alert("it is not a power of 2");
+      }
+    </script>
+  </body>
+</html>

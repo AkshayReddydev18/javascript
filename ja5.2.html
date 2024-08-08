@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loan requirements</title>
+</head>
+<body>
+    
+
+    <script>
+         let credit_score = +prompt("enter credit_score");
+      let annual_income = +prompt("enter annual income");
+      let loan = +prompt(" enter loan amount");
+      if (credit_score > 600) {
+        if (annual_income > 40000) {
+          if (loan <= annual_income * (1 / 2)) {
+            alert("your eligible for loan");
+          } else {
+            alert(
+              "loan rejected due to loan amount is  more than half of your annual income"
+            );
+          }
+        } else {
+          alert("loan rejected due to annual income is not mora than 40000");
+        }
+      } else {
+        alert("your loan rejected due low credit score ");
+      }s
+    </script>
+</body>
+</html>
