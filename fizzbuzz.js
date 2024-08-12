@@ -8,9 +8,9 @@ for(let i=1; i<=20; i++){
     else if(i%3==0){
         console.log(i+"buzz");
     }
-    else if(i%5==0){
-        console.log(i+"div 5");
-    }
+    // else if(i%5==0){
+    //     console.log(i);
+    // }
     else{
         console.log(i);
     }
