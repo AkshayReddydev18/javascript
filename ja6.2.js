@@ -1,7 +1,13 @@
+// let fat=0
 
-let fat=0
+// for(let x=1; x<10;x++){
+//     fat *=x;
+// }
+// console.log(fat)
 
-for(let x=1; x<10;x++){
-    fat *=x;
+function table(x) {
+  for (i = 1; i <= 10; i++) {
+    console.log(`${x}X${i}=${x * i}`);
+  }
 }
-console.log(fat)
+table(2)
