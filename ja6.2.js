@@ -10,4 +10,4 @@ function table(x) {
     console.log(`${x}X${i}=${x * i}`);
   }
 }
-table(2)
+table(3)
