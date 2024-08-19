@@ -56,3 +56,7 @@ for(i=1;i<num.length;i++){
 console.log("Minimum  and maxmium number in "+num+" is : "+min+ "," +max)
 console.log("sum of min and max number in "+num+"is :"+(Number(min)+Number(max)))
 console.log("min and max index positionis are:"+minInd+","+maxInd)
+
+console.log("Minimum  and maxmium number in "+num+" is : "+min+ "," +max)
+console.log("sum of min and max number in "+num+"is :"+(Number(min)+Number(max)))
+console.log("min and max index positionis are:"+minInd+","+maxInd)
