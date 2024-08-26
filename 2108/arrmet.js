@@ -204,41 +204,34 @@ arr = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML.AC_UX679.jpg",
     rating: { rate: 3.6, count: 145 },
-  }
+  },
 ];
-
-//  let y = arr.map((a)=>{
-//     (a.price>50)
-//         console.log(`title above Rs.50:${a.title}`)
-   
-// }
-// )
-
-// let y = arr.sort((a,b)=>a.price-b.price)
-// let z = y.find(a=>a.category=="electronics")
-// console.log(z)
+let arr = [ ]
+let y = arr.filter((a) => a.price > 50);
+let z = y.map((a) => a.title);
+console.log(z);
 
 
-// let x = arr.map(a=>a.description)
-// let y = x.join()
-// console.log(y)
+let arr = [ ]
+let y = arr.sort((a,b)=>a.price-b.price)
+let z = y.find(a=>a.category=="electronics")
+console.log(z)
 
 
-// let x = arr.filter(a=>a.category=="women's clothing")
-// let y = x.reduce(a=>a.price)
-// console.log(y)
+let arr = [ ]
+let x = arr.map(a=>a.description)
+let y = x.join()
+console.log(y)
 
-sum=0;
+
+let arr = [ ]
 let x = arr.filter((a)=>a.category=="women's clothing")
 .reduce((b,a)=>b+a.price,0);
 console.log(x)
 
 
-
-
- 
-
-
-
-
+let arr = [ ]
+let x = arr.filter(a=>a.description.toLowerCase().includes("waterproof") );
+let y = x.filter(a=>a.price>20)
+console.log(x);
 

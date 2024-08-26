@@ -16,7 +16,6 @@ for(i of emp){
         if(i==j){
             c++;
         }
-
     }
     if(c==1){
         uni.push(i);
@@ -25,11 +24,9 @@ for(i of emp){
         dup.push(i);
     }
 }
-
-
  newuni = (uni.length>1)?`uniques are: ${uni}`:`unique is: ${uni}`;
  newdup = (dup.length>1)?`duplicates are:${dup}`:`duplicate is: ${dup}`;
  console.log(newuni);
  console.log(newdup);
 }
- sep("2342345")
+sep("2342345")
