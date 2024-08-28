@@ -55,14 +55,14 @@
 // console.log(y1)
 
 
-let obj2 = {
-    a:1,
-    b:2,
-}
-let obj22 = {
-    c:3,
-    d:4,
-}
+// let obj2 = {
+//     a:1,
+//     b:2,
+// }
+// let obj22 = {
+//     c:3,
+//     d:4,
+// }
 // let z1 = Object.assign({},obj2,obj22);
 // console.log(z1)
 
@@ -76,6 +76,14 @@ let obj22 = {
 // console.log(z111)
 
 
-let obj = { a: 1, b: 2, c: 3};
-let obj1 = {d:4};
-console,log(Object.getPrototypeOf())
+// let obj = { a: 1, b: 2, c: 3};
+// let obj1 = {d:4};
+// console,log(Object.getPrototypeOf())
+
+
+
+const date = new Date()
+const hours= date.getHours()
+const min=date.getMinutes()
+const sec = date.getSeconds()
+console.log(hours+`:`+min+`:`+sec)
