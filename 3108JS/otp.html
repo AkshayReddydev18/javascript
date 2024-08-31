@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+</head>
+<body>
+    <!-- <label for="email">E-Mail:</label> -->
+    <!-- <input  id="email" type="mail" > -->
+    <button id="otpgenerate" onclick="otpgen()">Generate OTP</button>
+    <p type="number" id="result"></p>
+    <input type="number" id="otpp" >
+    <input type="submit" onclick="otpsub()">
+    <p id="res"></p>
+    <br><br>
+    
+
+
+    <script>
+        let otp=0;
+        function otpgen(){
+            otp =    Math.floor( Math.random()*990000);
+            // oott= otp.slice(-7,-1)
+            result.textContent=otp;
+        }
+        function otpsub(){
+            var x = document.getElementById("otpp").value;
+            res.textContent=`${x}`;
+            if(x==otp && x.length==6){
+                res.textContent=`Verified`;
+            }
+            else{
+                res.textContent=`enter valid OTP`;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -20,6 +20,7 @@ function sep(x) {
       res += Math.floor(c / 2);
     }
   }
-  console.log(res);
+  console.log(`NO OF PAIRS:`+res);
 }
 sep("30 50 30 50 20 50 50 20 50 50 50");
+sep("10 20 10 30 20 20")
