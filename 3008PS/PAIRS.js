@@ -1,6 +1,6 @@
 function sep(x){
     arr = x.split(" ").map(Number);
-    console.log(arr);
+    // console.log(arr);
 emp=[];
 uni=[];
 dup=[];
@@ -10,7 +10,7 @@ for(i of arr) {
         emp.push(i);
     }
 }
-console.log(emp);
+// console.log(emp);
 for(i of emp){
     c=0;
     for(j of arr){
@@ -20,14 +20,14 @@ for(i of emp){
     }
     if(c==1){
         uni.push(i);
-        console.log(i,`->`,c)
+        // console.log(i,`->`,c)
         
             
         }
     
     else{
         dup.push(i);
-        console.log(i,`->`,c)
+        // console.log(i,`->`,c)
         res+=Math.floor(c/2)
     }
 }
