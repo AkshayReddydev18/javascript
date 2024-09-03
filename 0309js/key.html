@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="akshay"></div>
+
+    <button id="btn" onclick="otpgen()">button</button>
+
+    <script>
+       const akshay = document.getElementById("akshay")
+       akshay.style.border= '3px solid black';
+       akshay.style.height='50px';
+       akshay.style.width='100px';
+       akshay.textalign='center';
+       
+
+        const para = document.createElement('p');
+        akshay.appendChild(para);
+        // let otp=0;
+        // para.addEventListener("click",()=>{
+        //      otp = Math.floor( Math.random()*990900);
+        //     para.innerText=otp;
+
+        // })
+
+        let otp=0;
+        function otpgen(){
+            otp =    Math.floor( Math.random()*990900);
+            para.innerText=otp;
+        }
+
+        let btn1=document.getElementById("btn");
+
+
+
+    </script>
+
+
+</body>
+</html>

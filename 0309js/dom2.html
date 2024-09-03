@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  <h1>something</h1> -->
+   <h1 id="head1" onclick="demo()" >click me</h1> 
+
+    <!-- <button id="btn" onclick="demo()">button</button> -->
+    <!-- <button id="btn" dblclick="demo()">button</button> -->
+    <button id="btn" onclick="click()" mouseover="demo()">button</button>
+
+    <script>
+      // function demo(){
+      //     let head1=document.getElementById("head1");
+      //     head1.style.color="green";
+      //     head1.innerHTML="changes";
+
+      //     // document.write("akshay");
+
+      // }
+
+    //   function demo() {
+    //     document.body.style.backgroundColor = "blue";
+    //   }
+
+      function click() {
+        let head11 = document.getElementById("head1");
+        head11.innerHTML("welcome");
+      }
+      function demo(){
+        let head2=document.getElementById("head1");
+        head2.innerText("akshay")
+      }
+    </script>
+  </body>
+</html>

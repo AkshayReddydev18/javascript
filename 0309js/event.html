@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button id="akshay">click me</button> -->
+    <input  id="akshay" type="text">
+    <!-- <button>akshay</button> -->
+    <!-- <img src="../growth-50.png" alt=""> -->
+    <!-- <div id="result"></div> -->
+
+    <script>
+      let btn1 = document.getElementById("akshay");
+        btn1.addEventListener("click", () => {
+          document.body.style.backgroundolor = "indigo";
+        });
+      btn1.addEventListener("dblclick", () => {
+        document.body.style.backgroundColor = "aqua";
+      });
+      btn1.addEventListener("click", () => {
+        document.body.style.backgroundColor = "red";
+      });
+      btn1.addEventListener("mouseover", () => {
+        document.body.style.backgroundColor = "blue";
+      });
+      btn1.addEventListener("keydown", () => {
+        document.body.style.backgroundColor = "green";
+      });
+      btn1.addEventListener("keyup", () => {
+        document.body.style.backgroundColor = "orange";
+      });
+      btn1.addEventListener("focus", () => {
+        document.body.style.backgroundColor = "violet";
+      });
+
+    </script>
+  </body>
+</html>
