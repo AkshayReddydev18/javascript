@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input id="ip1" type="text" />
+      <input id="ip2" type="number" />
+      <input type="submit" />
+    </form>
+    <p></p>
+    <script>
+      let myform = document.getElementsByTagName("form");
+      myform[0].addEventListener("submit", (e) => {
+        e.preventDefault();
+        let myip1 = document.getElementById("ip1");
+        let myip2 = document.getElementById("ip2");
+        let myp = document.getElementsByTagName("p");
+        let add = parseInt(myip1.value) + parseInt(myip2.value);
+        // myp[0].innerHTML=add;
+
+        if (add % 2 == 0) {
+          myp[0].innerHTML = `${add} is even`;
+        } else {
+          myp[0].innerHTML = `${add} is odd`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID Card</title>
+  </head>
+  <body>
+    <!-- <button onclick="printIDCard()">Print ID Card</button> -->
+
+    <form>
+      <label for="cpy">Company Name</label><br />
+      <input type="text" id="cpy" /><br />
+
+      <label for="fn">First Name:</label><br />
+      <input type="tex" id="fn" /><br />
+
+      <label for="sn">Second Name:</label><br />
+      <input type="tex" id="sn" /><br />
+
+      <label for="dob">Date of Birth:</label><br />
+      <input type="tex" id="dob" /><br />
+
+      <label for="gender">Gender:</label><br />
+      <input type="tex" id="gender" />
+      <br /><br />
+
+      <input type="submit" />
+    </form>
+
+    <div id="idCard"></div>
+
+    <script>
+      const idCard = document.getElementById("idCard");
+
+      const cardDiv = document.createElement("div");
+      const company = document.createElement("h2");
+      const img = document.createElement("img");
+      const name = document.createElement("h3");
+      const role = document.createElement("p");
+      const idNumber = document.createElement("p");
+
+      const company = document.getElementById("cpy")
+
+      company.textContent = "10K Coders";
+      img.src = "./csspic.jpeg";
+      img.alt = "Profile Picture";
+      name.textContent = "Rosey";
+      role.textContent = "Developer";
+      idNumber.textContent = "ID: 123456";
+
+      cardDiv.style.border = "3px solid black";
+      cardDiv.style.height = "300px";
+      cardDiv.style.width = "180px";
+      cardDiv.style.padding = "20px";
+      cardDiv.style.textAlign = "center";
+      cardDiv.style.margin = "20px auto";
+      cardDiv.style.boxShadow = "0 0 20px black";
+
+      cardDiv.onmouseover = function () {
+        cardDiv.style.transform = "scale(1.05)";
+        cardDiv.style.boxShadow = "0 0 20px indigo";
+      };
+      cardDiv.onmouseout = function () {
+        cardDiv.style.transform = "scale(1)";
+        cardDiv.style.boxShadow = "0 0 20px black";
+      };
+
+      img.style.width = "100px";
+      img.style.height = "100px";
+      img.style.borderRadius = "50%";
+      img.style.boxShadow = "0 0 10px  aqua";
+
+      cardDiv.appendChild(company);
+      cardDiv.appendChild(img);
+      cardDiv.appendChild(name);
+      cardDiv.appendChild(role);
+      cardDiv.appendChild(idNumber);
+
+      idCard.appendChild(cardDiv);
+
+      function printIDCard() {
+        const printWindow = window.open("", "", "height=600,width=400");
+        printWindow.document.write(
+          "<html><head><title>ID Card</title></head><body>"
+        );
+        printWindow.document.write(cardDiv.outerHTML);
+        printWindow.document.write("</body></html>");
+        printWindow.document.close();
+        printWindow.print();
+      }
+    </script>
+  </body>
+</html>

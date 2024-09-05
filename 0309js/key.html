@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div  id="akshay"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <div id="akshay"></div>
 
     <button id="btn" onclick="otpgen()">button</button>
 
     <script>
-       const akshay = document.getElementById("akshay")
-       akshay.style.border= '3px solid black';
-       akshay.style.height='50px';
-       akshay.style.width='100px';
-       akshay.textalign='center';
-       
+      const mydiv = document.getElementById("akshay");
+      mydiv.addEventListener("mousedown", () => {
+        document.body.style.backgroundColor = "aqua";
+      });
+      mydiv.addEventListener("mouseup", () => {
+        document.body.style.backgroundColor = "wheat";
+      });
+      mydiv.addEventListener("mouseover", () => {
+        mydiv.style.backgroundColor = "orange";
+      });
 
-        const para = document.createElement('p');
-        akshay.appendChild(para);
-        // let otp=0;
-        // para.addEventListener("click",()=>{
-        //      otp = Math.floor( Math.random()*990900);
-        //     para.innerText=otp;
+      mydiv.style.border = "3px solid black";
+      mydiv.style.height = "50px";
+      mydiv.style.width = "150px";
 
-        // })
+      const para = document.createElement("p");
+      para.style.color = "blue";
+      mydiv.appendChild(para);
 
-        let otp=0;
-        function otpgen(){
-            otp =    Math.floor( Math.random()*990900);
-            para.innerText=otp;
-        }
-
-        let btn1=document.getElementById("btn");
-
-
-
+      let btn1 = document.getElementById("btn");
+      otp = 0;
+      btn1.addEventListener("click", () => {
+        otp = Math.floor(Math.random() * 990900);
+        para.innerText = otp;
+      });
+      btn1.addEventListener("dblclick", () => {
+        para.textContent = "OTP sent successfully";
+      });
     </script>
-
-
-</body>
+  </body>
 </html>

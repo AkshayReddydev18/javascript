@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricketer Cards</title>
+    <style>
+      #card-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+        text-align: center;
+      }
+      image {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="show-card-btn">Next Cricketer</button>
+    <div id="card-container"></div>
+
+    <script>
+      const cricketers = [
+        {
+          name: "Sachin Tendulkar",
+          image: "./sachincard.jepg",
+          country: "India",
+        },
+        {
+          name: "Hardik Panda",
+          image: "./pabdacard.jepg",
+          country: "India",
+        },
+        { name: "Virat Kohli", image: "./viratcard.jpeg", country: "India" },
+        {
+          name: "AB de Villiers",
+          image: "./abdcard.jepg",
+          country: "South Africa",
+        },
+        {
+          name: "Gautam Gambir",
+          image: "./gambircard.jepg",
+          country: "India",
+        },
+      ];
+
+      let img = document.createElement("img");
+
+      img.style.height = "100px";
+      img.style.width = "100px";
+
+      let currentIndex = 0;
+
+      document
+        .getElementById("show-card-btn")
+        .addEventListener("click", function () {
+          if (currentIndex < cricketers.length) {
+            const cricketer = cricketers[currentIndex];
+            const cardContainer = document.getElementById("card-container");
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `<img src="${cricketer.image}"><h3>${cricketer.name}</h3><p>${cricketer.country}</p>`;
+            cardContainer.appendChild(card);
+            currentIndex++;
+          } else {
+            alert("No more cricketers to show!");
+          }
+        });
+    </script>
+  </body>
+</html>

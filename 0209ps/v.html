@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinaya Chaviti Greeting Card</title>
+</head>
+<style>
+    body{
+        transform: translateX();
+    }
+</style>
+<body>
+
+<div id="greetingCard"></div>
+
+<!-- <button onclick="printGreetingCard()">Print Greeting Card</button> -->
+
+<script>
+    
+    const greetingCard = document.getElementById('greetingCard');
+    const cardDiv = document.createElement('div');
+    const title = document.createElement('h1');
+    const message = document.createElement('p');
+    const image = document.createElement('img');
+    const mouseimage = document.createElement('img');
+    const footer = document.createElement('p');
+
+   
+    title.textContent = "Happy Vinaya Chaviti!";
+    message.textContent = "Wishing you a day filled with joy and prosperity.";
+    image.src = "./ganesh.avif";
+    image.alt = "Vinaya Chaviti Celebration";
+    mouseimage.src = "./mouse.jpeg";
+    mouse.alt = "mouseimg"
+    footer.textContent = "May your celebrations be blessed!";
+
+    
+    cardDiv.style.border = '2px solid #4CAF50';
+    cardDiv.style.width = '400px';
+    cardDiv.style.padding = '20px';
+    cardDiv.style.textAlign = 'center';
+    cardDiv.style.margin = '20px auto';
+    cardDiv.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
+    cardDiv.style.borderRadius = '10px';
+    cardDiv.style.backgroundColor = '#f9f9f9';
+    cardDiv.style.transition = 'transform 0.3s, box-shadow 0.3s';
+
+    title.style.color = '#4CAF50';
+    title.style.marginBottom = '10px';
+    
+    message.style.fontSize = '18px';
+    message.style.margin = '10px 0';
+
+    image.style.width = '100%';
+    image.style.borderRadius = '10px';
+
+    mouseimage.style.height = '50px';
+    mouseimage.style.width = '50px';
+    
+    
+
+    footer.style.marginTop = '20px';
+    footer.style.fontStyle = 'italic';
+
+    
+    cardDiv.onmouseover = function() {
+    cardDiv.style.transform = 'scale(1.05)';
+    cardDiv.style.boxShadow = '0 0 20px lightgreen';
+    mouseimage.style.transform = tr
+
+    };
+
+    cardDiv.onmouseout = function() {
+        cardDiv.style.transform = 'scale(1)';
+        cardDiv.style.boxShadow = '0 0 10px indogo';
+    };
+
+    
+    cardDiv.appendChild(title);
+    cardDiv.appendChild(message);
+    cardDiv.appendChild(image);
+    cardDiv.appendChild(footer);
+
+    
+    greetingCard.appendChild(cardDiv);
+
+    function printGreetingCard() {
+        const printWindow = window.open('', '', 'height=600,width=400');
+        printWindow.document.write('<html><head><title>Greeting Card</title></head><body>');
+        printWindow.document.write(cardDiv.outerHTML);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+</script>
+
+</body>
+</html>

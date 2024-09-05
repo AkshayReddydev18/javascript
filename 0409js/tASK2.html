@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricketer Cards</title>
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+        text-align: center;
+        display: inline-block;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-container"></div>
+    <button id="show-card-btn">Show Next Cricketer</button>
+
+    <script>
+      const cricketers = [
+        {
+          name: "Sachin Tendulkar",
+          country: "India",
+          image: "./sachincard.jepg",
+        },
+        {
+          name: "Brian Lara",
+          country: "West Indies",
+          image: "https://example.com/brian.jpg",
+        },
+        {
+          name: "Virat Kohli",
+          country: "India",
+          image: "https://example.com/virat.jpg",
+        },
+        {
+          name: "AB de Villiers",
+          country: "South Africa",
+          image: "https://example.com/ab.jpg",
+        },
+        {
+          name: "Ricky Ponting",
+          country: "Australia",
+          image: "https://example.com/ricky.jpg",
+        },
+      ];
+      const btn = document.getElementById("show-card-btn");
+      btn[0].addEventListener("click",()=>{
+        let index = Math.floor(Math.random()*cricketers.length)
+
+      })
+
+    
+    </script>
+  </body>
+</html>
