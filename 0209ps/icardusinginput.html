@@ -18,16 +18,28 @@
         margin-top: 20px;
         display: none;
       }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      div {
+        background-image: url(./backimage.jpg);
+      }
     </style>
   </head>
   <body>
     <h2>ID Card Generator</h2>
     <form id="idCardForm">
       <label for="name">Name:</label><br />
-      <input type="text" id="name" required /><br /><br />
+      <input type="text" id="name" required placeholder="Ex:John" /><br /><br />
 
       <label for="dateofbirth">Date of Birth:</label><br />
-      <input type="text" id="dateofbirth" required placeholder="DD/MM/YYYY"/><br /><br />
+      <input
+        type="text"
+        id="dateofbirth"
+        required
+        placeholder="DD/MM/YYYY"
+      /><br /><br />
 
       <label for="idNumber">ID Number:</label><br />
       <input type="text" id="idNumber" required /><br /><br />
@@ -35,8 +47,11 @@
       <label for="designation">Designation:</label><br />
       <input type="text" id="designation" required /><br /><br />
 
-      <input type="file"><br><br>
-      <input type="reset">
+      <input accept="image/*" type="file" id="imgInp" />
+      <!-- image -->
+
+      <!-- <input type="file" /><br /><br /> -->
+      <input type="reset" />
 
       <button type="submit">Generate ID Card</button>
     </form>
@@ -44,6 +59,7 @@
     <div class="id-card" id="idCard">
       <h3>ID Card</h3>
       <div id="image"></div>
+      <img id="blah" src="#" alt="your image" />
       <p><strong>Name:</strong> <span id="cardName"></span></p>
       <p><strong>Date Of Birth:</strong><span id="carddateofbirth"></span></p>
       <p><strong>ID Number:</strong> <span id="cardIdNumber"></span></p>
@@ -51,13 +67,28 @@
     </div>
 
     <script>
-      document.getElementById("idCardForm").addEventListener("submit", function (event) {
+      document
+        .getElementById("idCardForm")
+        .addEventListener("submit", function (event) {
           event.preventDefault();
-          document.getElementById("image")
-          document.getElementById("cardName").textContent = document.getElementById("name").value;
-          document.getElementById("carddateofbirth").textContent = document.getElementById("dateofbirth").value;
-          document.getElementById("cardIdNumber").textContent = document.getElementById("idNumber").value;
-          document.getElementById("cardDesignation").textContent = document.getElementById("designation").value;
+
+          
+            const [file] = imgInp.files;
+            if (file) {
+              blah.src = URL.createObjectURL(file);
+              n;
+            }
+        
+
+          document.getElementById("image");
+          document.getElementById("cardName").textContent =
+            document.getElementById("name").value;
+          document.getElementById("carddateofbirth").textContent =
+            document.getElementById("dateofbirth").value;
+          document.getElementById("cardIdNumber").textContent =
+            document.getElementById("idNumber").value;
+          document.getElementById("cardDesignation").textContent =
+            document.getElementById("designation").value;
           document.getElementById("idCard").style.display = "block";
         });
     </script>

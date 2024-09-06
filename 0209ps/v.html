@@ -32,7 +32,7 @@
     image.src = "./ganesh.avif";
     image.alt = "Vinaya Chaviti Celebration";
     mouseimage.src = "./mouse.jpeg";
-    mouse.alt = "mouseimg"
+    mouseimage.alt = "mouseimg"
     footer.textContent = "May your celebrations be blessed!";
 
     
@@ -43,7 +43,7 @@
     cardDiv.style.margin = '20px auto';
     cardDiv.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
     cardDiv.style.borderRadius = '10px';
-    cardDiv.style.backgroundColor = '#f9f9f9';
+    cardDiv.style.backgroundColor = 'wheat';
     cardDiv.style.transition = 'transform 0.3s, box-shadow 0.3s';
 
     title.style.color = '#4CAF50';
@@ -67,8 +67,8 @@
     cardDiv.onmouseover = function() {
     cardDiv.style.transform = 'scale(1.05)';
     cardDiv.style.boxShadow = '0 0 20px lightgreen';
-    mouseimage.style.transform = tr
-
+    mouseimage.style.float = 'right'
+    // mouseimage.style.
     };
 
     cardDiv.onmouseout = function() {
@@ -80,6 +80,7 @@
     cardDiv.appendChild(title);
     cardDiv.appendChild(message);
     cardDiv.appendChild(image);
+    cardDiv.appendChild(mouseimage);
     cardDiv.appendChild(footer);
 
     

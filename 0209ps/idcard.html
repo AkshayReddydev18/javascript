@@ -8,7 +8,7 @@
   <body>
     <!-- <button onclick="printIDCard()">Print ID Card</button> -->
 
-    <form>
+    <!-- <form>
       <label for="cpy">Company Name</label><br />
       <input type="text" id="cpy" /><br />
 
@@ -26,7 +26,7 @@
       <br /><br />
 
       <input type="submit" />
-    </form>
+    </form> -->
 
     <div id="idCard"></div>
 
@@ -34,13 +34,13 @@
       const idCard = document.getElementById("idCard");
 
       const cardDiv = document.createElement("div");
-      const company = document.createElement("h2");
+      const company = document.createElement("h3");
       const img = document.createElement("img");
       const name = document.createElement("h3");
       const role = document.createElement("p");
       const idNumber = document.createElement("p");
 
-      const company = document.getElementById("cpy")
+      const companye = document.getElementById("cpy")
 
       company.textContent = "10K Coders";
       img.src = "./csspic.jpeg";
@@ -56,6 +56,7 @@
       cardDiv.style.textAlign = "center";
       cardDiv.style.margin = "20px auto";
       cardDiv.style.boxShadow = "0 0 20px black";
+      cardDiv.style.backgroundImage="url('backimage.jpg')"
 
       cardDiv.onmouseover = function () {
         cardDiv.style.transform = "scale(1.05)";
